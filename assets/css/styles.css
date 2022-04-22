@@ -60,6 +60,7 @@ input::placeholder {
 
 body {
   background: white;
+  padding-bottom: 60px;
 }
 
 body::-webkit-scrollbar {
@@ -795,6 +796,85 @@ body::-webkit-scrollbar-thumb:hover {
 
 .banner .slider-container .slider-item .banner-content .banner-btn:hover {
   background: #212121;
+}
+
+/*-------------------------*\
+  #CATEGORY
+\*-------------------------*/
+.category {
+  margin-bottom: 30px;
+}
+
+.category .category-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  overflow: auto hidden;
+  -ms-scroll-snap-type: inline mandatory;
+      scroll-snap-type: inline mandatory;
+  overscroll-behavior-inline: contain;
+}
+
+.category .category-item-container .category-item {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  scroll-snap-align: start;
+}
+
+.category .category-item-container .category-item .category-img-box {
+  background: #ededed;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.category .category-item-container .category-item .category-content-box {
+  width: 100%;
+}
+
+.category .category-item-container .category-item .category-content-box .category-content-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.category .category-item-container .category-item .category-content-box .category-content-flex .category-item-title {
+  color: #212121;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.category .category-item-container .category-item .category-content-box .category-content-flex .category-item-amount {
+  color: #787878;
+  font-size: 0.625rem;
+}
+
+.category .category-item-container .category-item .category-content-box .category-btn {
+  color: #ff8f9c;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 /*-------------------------*\
