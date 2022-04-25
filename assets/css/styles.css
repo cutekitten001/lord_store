@@ -878,6 +878,227 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /*-------------------------*\
+  #SIDEBAR
+\*-------------------------*/
+.sidebar {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  width: 100%;
+  max-width: 320px;
+  padding: 30px;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  visibility: hidden;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  z-index: 20;
+}
+
+.sidebar.active {
+  left: 0;
+  visibility: visible;
+}
+
+.sidebar .sidebar-category {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ededed;
+}
+
+.sidebar .sidebar-category .sidebar-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.sidebar .sidebar-category .sidebar-top .sidebar-title {
+  color: #454545;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+.sidebar .sidebar-category .sidebar-top .sidebar-close-btn {
+  color: #212121;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sidebar .sidebar-category .sidebar-top .sidebar-close-btn ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-accordion-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7px 0;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-accordion-menu .menu-title-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-accordion-menu .menu-title-flex .menu-title {
+  font-size: 1rem;
+  color: #787878;
+  font-weight: 500;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-accordion-menu ion-icon {
+  color: #787878;
+  font-size: 14px;
+  --ionicon-stroke-width: 70px;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-accordion-menu.active .add-icon,
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-accordion-menu .remove-icon {
+  display: none;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-accordion-menu .add-icon,
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-accordion-menu.active .remove-icon {
+  display: block;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-submenu-category-list {
+  border-top: 1px solid #ededed;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-submenu-category-list.active {
+  padding: 13px 0 8px;
+  max-height: 122px;
+  visibility: visible;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-submenu-category-list .sidebar-submenu-category .sidebar-submenu-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #787878;
+  font-size: 0.875rem;
+  padding: 2px 0;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-submenu-category-list .sidebar-submenu-category .sidebar-submenu-title:hover {
+  color: #212121;
+}
+
+.sidebar .sidebar-category .sidebar-menu-category-list .sidebar-menu-category .sidebar-submenu-category-list .sidebar-submenu-category .sidebar-submenu-title .product-name {
+  text-transform: capitalize;
+}
+
+.sidebar .product-showcase .showcase-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #454545;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 15px;
+}
+
+.sidebar .product-showcase .showcase-wrapper .showcase-container .showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.sidebar .product-showcase .showcase-wrapper .showcase-container .showcase:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.sidebar .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-img-box .showcase-img {
+  border-radius: 5px;
+}
+
+.sidebar .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content {
+  width: calc(100% - 90px);
+}
+
+.sidebar .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-title {
+  color: #454545;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  letter-spacing: 0.5px;
+}
+
+.sidebar .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f6a355;
+  font-size: 13px;
+  padding: 3px 0;
+}
+
+.sidebar .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .price-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.sidebar .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .price-box del {
+  color: #787878;
+  font-size: 13px;
+}
+
+.sidebar .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .price-box .price {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #545454;
+}
+
+/*-------------------------*\
   #
 \*-------------------------*/
 /**
