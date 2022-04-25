@@ -112,6 +112,17 @@ body::-webkit-scrollbar-thumb:hover {
   background: #e6e6e6;
 }
 
+.title {
+  color: #212121;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 30px;
+}
+
 /*-------------------------*\
   #MAIN
 \*-------------------------*/
@@ -1096,6 +1107,285 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 0.875rem;
   font-weight: 600;
   color: #545454;
+}
+
+/*-------------------------*\
+  #PRODUCT MINIMAL
+\*-------------------------*/
+.product-minimal {
+  margin-bottom: 30px;
+}
+
+.product-minimal .product-showcase {
+  margin-bottom: 10px;
+}
+
+.product-minimal .product-showcase .showcase-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -ms-scroll-snap-type: inline mandatory;
+      scroll-snap-type: inline mandatory;
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container {
+  min-width: 100%;
+  padding: 0 5px;
+  scroll-snap-align: start;
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container .showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  border: 1px solid #ededed;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container .showcase:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content {
+  width: calc(100% - 85px);
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-title {
+  color: #212121;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-category {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #545454;
+  font-size: 0.813rem;
+  text-transform: capitalize;
+  margin-bottom: 3px;
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-category:hover {
+  color: #ff8f9c;
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .price-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .price-box del {
+  font-size: 0.75rem;
+  color: #787878;
+}
+
+.product-minimal .product-showcase .showcase-wrapper .showcase-container .showcase .showcase-content .price {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ff8f9c;
+}
+
+/*-------------------------*\
+  #PRODUCT FEATURED
+\*-------------------------*/
+.product-featured {
+  margin-bottom: 30px;
+}
+
+.product-featured .showcase-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -ms-scroll-snap-type: inline mandatory;
+      scroll-snap-type: inline mandatory;
+}
+
+.product-featured .showcase-wrapper .showcase-container {
+  min-width: 100%;
+  padding: 30px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  scroll-snap-align: start;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-banner .showcase-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content {
+  margin-top: 30px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-rating {
+  color: #f6a355;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-title {
+  font-size: 0.875rem;
+  color: #212121;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-desc {
+  color: #787878;
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .price-box {
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .price-box .price {
+  color: #ff8f9c;
+  font-weight: 700;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .price-box del {
+  color: #787878;
+  font-weight: 300;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .add-cart-btn {
+  background: #ff8f9c;
+  padding: 8px 15px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .add-cart-btn:hover {
+  background: #212121;
+  color: white;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-status {
+  margin-bottom: 15px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-status .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #212121;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-status .showcase-status-bar {
+  background: #ededed;
+  position: relative;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .showcase-status .showcase-status-bar::before {
+  position: absolute;
+  content: '';
+  top: 3px;
+  left: 3px;
+  height: 4px;
+  width: 40%;
+  background: #ff8f9c;
+  border-radius: 4px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .countdown-box .countdown-desc {
+  color: #212121;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .countdown-box .countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .countdown-box .countdown .countdown-content {
+  padding: 5px;
+  background: #ededed;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .countdown-box .countdown .display-number {
+  color: #212121;
+  font-size: 1rem;
+  font-weight: 500;
+  min-width: 40px;
+}
+
+.product-featured .showcase-wrapper .showcase-container .showcase .showcase-content .countdown-box .countdown .display-text {
+  color: #545454;
+  font-size: 0.625rem;
 }
 
 /*-------------------------*\

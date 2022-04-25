@@ -139,6 +139,17 @@ body {
   }
 }
 
+.title {
+  color: $eeric-black;
+  font-size: $fs-5;
+  font-weight: $weight-600;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $cultured;
+  margin-bottom: 30px;
+}
+
 /*-------------------------*\
   #MAIN
 \*-------------------------*/
@@ -997,6 +1008,253 @@ body {
       }
 
 
+    }
+  }
+}
+
+/*-------------------------*\
+  #PRODUCT MINIMAL
+\*-------------------------*/
+.product-minimal {
+  margin-bottom: 30px;
+
+  .product-showcase {
+    margin-bottom: 10px;
+
+    .showcase-wrapper {
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-snap-type: inline mandatory;
+
+      .showcase-container {
+        min-width: 100%;
+        padding: 0 5px;
+        scroll-snap-align: start;
+
+        .showcase {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 15px;
+          border: 1px solid $cultured;
+          padding: 15px;
+          border-radius: $border-radius-md;
+
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+
+          .showcase-content { 
+            width: calc(100% - 85px);
+
+            .showcase-title {
+              color: $eeric-black;
+              font-size: $fs-7;
+              font-weight: $weight-600;
+              text-transform: capitalize;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              margin-bottom: 2px;
+            }
+
+            .showcase-category {
+              width: max-content;
+              color: $davys-gray;
+              font-size: $fs-8;
+              text-transform: capitalize;
+              margin-bottom: 3px;
+
+              &:hover {
+                color: $salmon-pink;
+              }
+            }
+
+            .price-box {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              del {
+                font-size: $fs-9;
+                color: $sonic-silver;
+              }
+            }
+
+            .price {
+              font-size: $fs-7;
+              font-weight: $weight-700;
+              color: $salmon-pink;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-------------------------*\
+  #PRODUCT FEATURED
+\*-------------------------*/
+.product-featured {
+  margin-bottom: 30px;
+
+  .showcase-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+
+    .showcase-container {
+      min-width: 100%;
+      padding: 30px;
+      border: 1px solid $cultured;
+      border-radius: $border-radius-md;
+      scroll-snap-align: start;
+
+      .showcase {
+        .showcase-banner {
+          .showcase-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .showcase-content {
+          margin-top: 30px;
+
+          .showcase-rating {
+            color: $sandy-brown;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+
+          .showcase-title {
+            font-size: $fs-7;
+            color: $eeric-black;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+          }
+
+          .showcase-desc {
+            color: $sonic-silver;
+            font-size: $fs-7;
+            font-weight: $weight-300;
+            margin-bottom: 10px;
+          }
+
+          .price-box {
+            font-size: $fs-3;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+
+            .price {
+              color: $salmon-pink;
+              font-weight: $weight-700;
+            }
+
+            del {
+              color: $sonic-silver;
+              font-weight: $weight-300;
+            }
+          }
+
+          .add-cart-btn {
+            background: $salmon-pink;
+            padding: 8px 15px;
+            color: $white;
+            font-size: $fs-9;
+            font-weight: $weight-700;
+            text-transform: uppercase;
+            border-radius: $border-radius-md;
+            margin-bottom: 15px;
+            transition: $transition-timing;
+
+            &:hover {
+              background: $eeric-black;
+              color: $white;
+            }
+          }
+
+          .showcase-status {
+            margin-bottom: 15px;
+
+            .wrapper {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              color: $eeric-black;
+              font-size: $fs-9;
+              font-weight: $weight-400;
+              text-transform: uppercase;
+              margin-bottom: 10px;
+            }
+
+            .showcase-status-bar {
+              background: $cultured;
+              position: relative;
+              height: 10px;
+              border-radius: 5px;
+
+              &::before {
+                position: absolute;
+                content: '';
+                top: 3px;
+                left: 3px;
+                height: 4px;
+                width: 40%;
+                background: $salmon-pink;
+                border-radius: 4px;
+              }
+            }
+          }
+
+          .countdown-box {
+            .countdown-desc {
+              color: $eeric-black;
+              font-size: $fs-9;
+              font-weight: $weight-600;
+              text-transform: uppercase;
+              margin-bottom: 10px;
+            }
+
+            .countdown {
+              display: flex;
+              gap: 5px;
+
+              .countdown-content {
+                padding: 5px;
+                background: $cultured;
+                border-radius: $border-radius-md;
+                text-align: center;
+              }
+
+              .display-number {
+                color: $eeric-black;
+                font-size: $fs-5;
+                font-weight: $weight-500;
+                min-width: 40px;
+              }
+
+              .display-text {
+                color: $davys-gray;
+                font-size: $fs-11;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
